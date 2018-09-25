@@ -44,10 +44,10 @@ class SupportRequest(Mapping):
         input_to_word_list: List[str] = [word for word in re.split(r"[-.?!,|\s]+", input_support_request)]
         return input_to_word_list
 
-r = SupportRequest(incoming_support_request)
+processed_request = SupportRequest(incoming_support_request)
 
 #debugging
-print(r.get("message"))
-print(r.get("tags"))
-print(r.get("words"))
-print(r)
+print(processed_request.get("message"))
+print(processed_request.get("tags"))
+print(processed_request.get("words"))
+print(processed_request)
